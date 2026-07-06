@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+coverage/
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
+!.env.example
+.pnpm-store/
+.codex-runs/
+.DS_Store
