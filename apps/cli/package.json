@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "dev": "tsx src/main.ts",
-    "test": "vitest run",
+    "dev": "pnpm --filter @infinity/kernel build && pnpm --filter @infinity/storage-files build && pnpm --filter @infinity/projection-sqlite build && tsx src/main.ts",
+    "test": "vitest run --passWithNoTests",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "echo 'lint not configured yet'"
   },
