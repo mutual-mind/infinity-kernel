@@ -13,7 +13,6 @@ codex exec \
   --cd "$(pwd)" \
   --model "${CODEX_MODEL:-gpt-5.5}" \
   --sandbox "${CODEX_SANDBOX:-danger-full-access}" \
-  --ask-for-approval never \
   --output-last-message ".codex-runs/last-message-${ts}.md" \
   - < prompts/codex-goal-001-kernel.md \
   2>&1 | tee ".codex-runs/run-${ts}.log"
