@@ -1,2 +1,2 @@
-// Placeholder. Codex Goal 001 should replace this with the real @infinity/kernel implementation.
-export const packageName = "@infinity/kernel";
+export * from "./canonical-json.js";
+export * from "./causal-spine.js";
