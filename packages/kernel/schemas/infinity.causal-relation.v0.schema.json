@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://saya.si/schemas/infinity/causal-relation-v0.json",
+  "title": "Causal Spine relation v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "id",
+    "source",
+    "target",
+    "predicate",
+    "attributes"
+  ],
+  "properties": {
+    "schema": {
+      "const": "infinity.causal-relation.v0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "predicate": {
+      "enum": [
+        "causes",
+        "influences",
+        "enables",
+        "inhibits",
+        "interpreted_as",
+        "motivates",
+        "realized_by",
+        "produces",
+        "supports",
+        "contradicts",
+        "evidences",
+        "revises",
+        "supersedes",
+        "depends_on",
+        "part_of",
+        "counterfactual_to"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "attributes": {
+      "type": "object"
+    }
+  }
+}
